@@ -1,7 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [background, setBackground] = useState("red");
+  const color = background === "red" ? "blue" : "red";
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +21,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <button
+        style={{ backgroundColor: background }}
+        onClick={() => setBackground("blue")}
+      >
+        change to {color}
+      </button>
     </div>
   );
 }
