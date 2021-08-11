@@ -6,8 +6,7 @@ test("renders learn react link", () => {
 
   const linkElement = screen.getByRole("link", { name: /learn react/i });
   expect(linkElement).toBeInTheDocument();
-
-  // checking button initial color
+});
 
 test("button has correct initial color", () => {
   render(<App />);
